@@ -37,11 +37,23 @@ export default function useOrders() {
       });
   }
 
+  function reset() {
+    axios
+      .get("/api/debug/reset")
+      .then((result) => {
+        getDriversOrders();
+      })
+      .catch((err) => {
+        return err;
+      });
+  }
+
   return {
     driversOrders,
     setDriversOrders,
     getDriversOrders,
     updateOrder,
     deleteDriver,
+    reset,
   };
 }
