@@ -8,14 +8,14 @@ export default function useOrders() {
   // GET request to get all drivers and their orders
   function getDriversOrders() {
     axios
-      .get("/api")
+      .get("https://rocket-assignment.herokuapp.com/api")
       .then((result) => setDriversOrders(result.data))
       .catch((err) => err);
   }
 
   function updateOrder(order) {
     axios
-      .put("/api/orders", order)
+      .put("https://rocket-assignment.herokuapp.com/api/orders", order)
       .then((result) => {
         getDriversOrders();
       })
@@ -26,7 +26,9 @@ export default function useOrders() {
 
   function deleteDriver(driverId) {
     axios
-      .delete(`/api/delete/driver/${driverId}`)
+      .delete(
+        `https://rocket-assignment.herokuapp.com/api/delete/driver/${driverId}`
+      )
       .then((result) => {
         getDriversOrders();
       })
