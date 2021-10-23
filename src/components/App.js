@@ -8,13 +8,14 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("/api/drivers")
+      .get("https://rocket-assignment.herokuapp.com/api/drivers")
       .then((result) => {
         setDrivers(result.data);
       })
       .catch((err) => {
         return err;
       });
+    console.log(drivers);
   }, []);
 
   return (
