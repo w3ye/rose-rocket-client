@@ -39,7 +39,7 @@ export default function useOrders() {
 
   function reset() {
     axios
-      .get("/api/debug/reset")
+      .get("https://rocket-assignment.herokuapp.com/api/debug/reset")
       .then((result) => {
         getDriversOrders();
       })
