@@ -1,0 +1,19 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: left;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: space-around;
+
+  .form {
+    display: flex;
+    justify-content: space-evenly;
+
+    .input {
+      width: 100px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}
